@@ -2,10 +2,10 @@ package entrega1;
 
 public class funciones {
 	// ejercicio 1
-	public static int productoConsecutivos(int n, int k) {
+	public static int productoConsecutivos(int n, int k1) {
         int resultado = 1;
         
-        for (int i = 0; i < k; i++) {
+        for (int i = 0; i < k1; i++) {
             resultado *= (n - i);  
         }
         
@@ -31,40 +31,40 @@ public class funciones {
         return resultado;
     }
 	
-	public static int Combinatorio(int n, int k) {
-		if (k > n ) {
+	public static int Combinatorio(int n1, int k2) {
+		if (k2 > n1 ) {
 			return 0;	
 		}
-		return factorial(n) / (factorial(k) * factorial(n - k));
+		return factorial(n1) / (factorial(k2) * factorial(n1 - k2));
 	}
 	//ejercicio 4
-	 public static int coeficienteBinomial(int n, int k) {
-	        if (k > n || k < 0) {
+	 public static int coeficienteBinomial(int n2, int k3) {
+	        if (k3 > n2 || k3 < 0) {
 	            return 0;
 	        }
-	        return factorial(n) / (factorial(k) * factorial(n - k));
+	        return factorial(n2) / (factorial(k3) * factorial(n2 - k3));
 	    }
 
-	    public static double S(int n, int k) {
+	    public static double S(int n2, int k3) {
 	        double suma = 0;
 	        
-	        for (int i = 0; i <= k; i++) {
-	            suma += Math.pow(-1, i) * coeficienteBinomial(k + 1, i + 1) * Math.pow(k - i, n);
+	        for (int i = 0; i <= k3; i++) {
+	            suma += Math.pow(-1, i) * coeficienteBinomial(k3 + 1, i + 1) * Math.pow(k3 - i, n2);
 	        }
 	        
-	        return suma / factorial(k);
+	        return suma / factorial(k3);
 	    }
 	    //ejercicio 5
-	    public static float f(float x) {
+	    public static double f(double x) {
 	        return x * x - 2;
 	    }
 
-	    public static float fPrima(float x) {
+	    public static double fPrima(double x) {
 	        return 2 * x;
 	    }
 
-	    public static float metodoNewton(float a, float epsilon) {
-	        float x_n = a;  
+	    public static double metodoNewton(double a, double epsilon) {
+	        double x_n = a;  
 
 	        while (Math.abs(f(x_n)) > epsilon) {
 	            x_n = x_n - f(x_n) / fPrima(x_n);
@@ -74,7 +74,7 @@ public class funciones {
 	    }
 	    //ejemplos
 	    public static void main(String[] args) {
-			System.out.println(productoConsecutivos(6,5));
+			System.out.println(productoConsecutivos(4,2));
 			System.out.println(productoSecuenciaGeometrica(2,2,4));
 			System.out.println(Combinatorio(4,3));
 		    System.out.println(S(5,2));
