@@ -55,8 +55,8 @@ public class lecturas {
 	}
 		
 	//ejercicio 8
-	public static List<String> obtenerPalabrasUnicas(String fichero){
-		List<String> lista = File2.lineasDeFichero(fichero);
+	public static List<String> obtenerPalabrasUnicas(String fichero1){
+		List<String> lista = File2.lineasDeFichero(fichero1);
 		List<String> lista2 = new ArrayList<String>();
 		
 		if (lista == null || lista.isEmpty()) {
@@ -75,10 +75,10 @@ public class lecturas {
 	}
 	
 	//ejercicio 9
-	public static Double longitudPromedioLineas(String fichero, String sep) {
+	public static Double longitudPromedioLineas(String fichero2, String sep) {
 		double a = 0.;
 		double b = 0.;
-		List<String> lista = File2.lineasDeFichero(fichero);
+		List<String> lista = File2.lineasDeFichero(fichero2);
 		if (lista == null || lista.isEmpty() || sep == null || sep.isEmpty()) {
 			return 0.;
 		}
